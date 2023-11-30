@@ -1,7 +1,9 @@
 <?php
 include __DIR__ . '/partials/header.php';
 
-passwordGenerator();
+$password = passwordGenerator();
+
+
 ?>
 
 <main class="container">
@@ -13,6 +15,10 @@ passwordGenerator();
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <h2>
+        <?php echo $password ?>
+    </h2>
+
 
 </main>
 

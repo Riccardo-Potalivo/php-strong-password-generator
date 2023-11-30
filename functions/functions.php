@@ -17,9 +17,14 @@ function passwordGenerator()
                 $newPassword .= $newCharacter;
             }
         }
-        var_dump($_GET['passwordLength']);
-        var_dump($newPassword);
+        // var_dump($_GET['passwordLength']);
+        // var_dump($newPassword);
+        $_SESSION['password'] = $newPassword;
+
+        return $newPassword;
     }
+
+
 }
 
 ?>
