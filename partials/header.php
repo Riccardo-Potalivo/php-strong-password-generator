@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . '/functions/functions.php';
+include __DIR__ . '/../functions/functions.php';
 
 // session_start();
 
