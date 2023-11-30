@@ -6,11 +6,13 @@ $password = passwordGenerator();
 
 ?>
 
-<main class="container">
+<main class="container d-flex flex-column align-items-center gap-3 pt-5 ">
+    <h1>Strong Password Generator</h1>
+    <h2>Genera una password sicura</h2>
 
-    <div class="card m-auto ">
-        <form method="GET">
-            <div class="row">
+    <div class="card p-4">
+        <form method="POST">
+            <div class="row g-3">
                 <div class="col-7">
                     <label for="passwordLength" class="form-label">Lunghezza password:</label>
                 </div>
@@ -62,20 +64,25 @@ $password = passwordGenerator();
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
-    <?php if ($password === 'selectValue') { ?>
-        <h2>
-            Scegli caratteri da utilizzare
-        </h2>
-    <?php } elseif ($password === '') { ?>
-        <h2>
-            Scegli lunghezza password
-        </h2>
-    <?php } elseif ($password) { ?>
-        <h2>
-            <?php echo $password ?>
-        </h2>
-    <?php } ?>
 
+    <?php if ($password === 'selectValue') { ?>
+        <div class="alert alert-danger">
+            Scegli caratteri da utilizzare
+        </div>
+    <?php } elseif ($password === '') { ?>
+        <div class="alert alert-danger">
+            Scegli lunghezza password
+        </div>
+    <?php } elseif ($password === 'maxLength') { ?>
+        <div class="alert alert-danger">
+            Scegli una password più corta
+        </div>
+    <?php } elseif ($password) { ?>
+        <div class="alert alert-success">
+            Password:
+            <?php echo $password ?>
+        </div>
+    <?php } ?>
 
 </main>
 

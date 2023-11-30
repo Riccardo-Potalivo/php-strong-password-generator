@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-.card {
-    padding: 1rem !important;
-    width: 40rem;
+.card,
+.alert {
+    /* margin: auto; */
+    width: 40rem !important;
 }
